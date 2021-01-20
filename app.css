@@ -22,6 +22,7 @@ html, body {
     border-style: solid ;
     border-radius: 5%;
     margin: 15% auto 5% auto;
+    box-shadow: 10px 5px 20px rgba(80, 80, 80, 0.404);
 }
 
 /* Determine winner */
