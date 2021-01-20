@@ -49,15 +49,18 @@ const changeColor = () =>{
 }
 
 //Reset Game
-resetButton.addEventListener('click', () =>{
-        [p1Count,p2Count] = [0,0];
-        player1Button.disabled = false;
-        player2Button.disabled = false;
-        p1Display.removeAttribute('class');
-        p2Display.removeAttribute('class');
-        p1Display.textContent = `${p1Count}`;
-        p2Display.textContent = `${p2Count}`;
-        gameWinner.textContent = "";
-        
+const reset = () =>{
+    [p1Count,p2Count] = [0,0];
+    player1Button.disabled = false;
+    player2Button.disabled = false;
+    p1Display.removeAttribute('class');
+    p2Display.removeAttribute('class');
+    p1Display.textContent = p1Count;
+    p2Display.textContent = p2Count;
+    gameWinner.textContent = "";
+}
+numberSelect.addEventListener('change',() =>{
+    reset();
 })
+resetButton.addEventListener('click', reset)
 
