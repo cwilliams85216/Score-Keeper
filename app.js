@@ -1,7 +1,7 @@
 //buttons
-const player1 = document.querySelector('#player1');
-const player2 = document.querySelector('#player2');
-const reset = document.querySelector('.reset');
+const player1Button = document.querySelector('#player1');
+const player2Button = document.querySelector('#player2');
+const resetButton = document.querySelector('.reset');
 //max Number
 const numberSelect = document.querySelector('#numberSelect');
 //score display
@@ -13,14 +13,14 @@ let p1Count = 0;
 let p2Count = 0;
 
 //player 1 Count
-player1.addEventListener('click', () =>{
+player1Button.addEventListener('click', () =>{
     p1Count++;
     p1Display.textContent = p1Count;
     endGame();
     changeColor();
 })
 //player 2 Count
-player2.addEventListener('click', () =>{
+player2Button.addEventListener('click', () =>{
     p2Count++;
     p2Display.textContent = p2Count;
     endGame();
@@ -30,8 +30,8 @@ player2.addEventListener('click', () =>{
 // Disable buttons when game is over
 const endGame = () =>{
     if (p1Count  === parseInt(numberSelect.value) || p2Count === parseInt(numberSelect.value)){
-        player1.disabled = true;
-        player2.disabled = true;
+        player1Button.disabled = true;
+        player2Button.disabled = true;
     }
 }
 
@@ -49,10 +49,10 @@ const changeColor = () =>{
 }
 
 //Reset Game
-reset.addEventListener('click', () =>{
+resetButton.addEventListener('click', () =>{
         [p1Count,p2Count] = [0,0];
-        player1.disabled = false;
-        player2.disabled = false;
+        player1Button.disabled = false;
+        player2Button.disabled = false;
         p1Display.removeAttribute('class');
         p2Display.removeAttribute('class');
         p1Display.textContent = `${p1Count}`;
