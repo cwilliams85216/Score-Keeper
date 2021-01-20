@@ -1,0 +1,269 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* background color */
+.bg{
+    background: linear-gradient(.25turn,#45bdb3,65%,#99a2f5 );
+    position:absolute;
+    z-index:-2;
+    width:100%;
+    min-height:100%;
+    top:0; 
+    margin: 0;
+}
+/* Gameboard */
+.gameBoard{
+    max-width: 18rem;
+    text-align: center;
+    border-width: 0px 7px 5px 0px;
+    border-color:rgba(80, 80, 80, 0.404);
+    border-style: solid ;
+    border-radius: 5%;
+    margin: 15% auto 5% auto;
+}
+
+/* Determine winner */
+.winner{
+    color:green;
+}
+.loser{
+    color:red;
+}
+#gameWinner{
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+
+/* Buttons */
+#player1, #player2, .reset{
+    border: 2px rgba(80, 80, 80, 0.404);
+    border-style: none solid solid none;
+    
+}
+.reset{
+    background-color: #cf9b70;
+}
+#player1:hover{
+    background-color: #54f3e693;
+}
+#player2:hover{
+    background-color:#a3adff;
+}
+.reset:hover{
+    background-color:#ffbd88;
+}
+#player1, #player2{
+    font-size: 0.9em;
+}
+
+/* Player text background */
+
+.p1,.p2{
+    position:absolute;
+    font-size: 4.2rem;
+    font-family: 'Press Start 2P', cursive;
+    white-space: nowrap;
+    z-index:-1;
+}
+.p1{
+    color:#54f3e693;
+    transform:rotate(90deg);
+    top:35%;
+    right:28%
+}
+.p2{
+    color:#a3adff;
+    transform:rotate(-90deg);
+    top: 41%;
+    right:-57%;
+    padding: 0;
+    line-height: 0;
+}
+
+/* text font sizes */
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.3em;
+}
+p, label{
+    font-size: 1em;
+}
+
+/* Media queries */
+@media(max-width: 376px){
+    .gameBoard{
+        max-width: 15rem;
+        height: 20rem;
+        margin: 20% auto 10% auto;
+    }
+    h1{
+        font-size: 1em;
+    }
+    p, label{
+        font-size: 0.8em;
+    }
+    #player1, #player2, .reset{
+        font-size: 0.6em;
+    }
+    .p1,.p2{
+        display: none;
+    }
+    #gameWinner{
+        font-size: 1em;
+    }
+  
+}
+@media(min-width: 420px){
+    .p1,.p2{
+        font-size: 3rem;
+    }
+    .p1{
+        top: 20%;
+        right: 50%
+    }
+    .p2{
+        top: 22%;
+        right: -39%;
+    }
+}
+@media(min-width: 530px){
+    .p1{
+        top: 35%;
+        right: 60%;
+    }
+    .p2{
+        top: 38%;
+        right: -31%;
+    }
+   
+   
+}
+@media(min-width:765px){
+    .gameBoard{
+        max-width: 30rem;
+        height: 27rem;
+        border-width: 0px 9px 7px 0px;
+        
+    }
+    .container{
+        margin: 17% 5%;
+    }
+    h1{
+        font-size: 2em;
+    }
+    p, label{
+        font-size: 1.3em;
+    }
+    #player1, #player2, .reset{
+        font-size: 1.1em;
+    }
+    .p1,.p2{
+        font-size: 4.8rem;
+    }
+    .p1{
+        top: 35%;
+        right: 56%;
+    }
+    .p2{
+        top: 40%;
+        right: -35%;
+    }
+    #gameWinner{
+        font-size: 1.5em;
+    }
+}
+@media (min-width:992px){
+    .gameBoard{
+        max-width: 40rem;
+        height: 35rem;
+    }
+    
+    h1{
+        font-size: 2.5em;
+    }
+    p, label{
+        font-size: 1.6em;
+    }
+    #player1, #player2, .reset{
+        font-size: 1.5em;
+    }
+    .p1,.p2{
+        font-size: 6rem;
+    }
+    .p1{
+        top: 38%;
+        right: 58%
+    }
+    .p2{
+        top: 43%;
+        right: -32%;
+    }
+    #gameWinner{
+        font-size: 2em;
+    }
+}
+
+@media(min-width: 1200px){
+    .gameBoard{
+        max-width: 40rem;
+        height: 35rem;
+    }
+    
+    h1{
+        font-size: 2.5em;
+    }
+    p, label{
+        font-size: 1.9em;
+    }
+    #player1, #player2, .reset{
+        font-size: 1.6em;
+    }
+    .p1,.p2{
+        font-size: 6.5rem;
+    }
+    .p1{
+        top: 40%;
+        right: 63%;
+    }
+    .p2{
+        top: 50%;
+        right: -28%;
+    }
+  
+}
+@media(min-width: 1400px){
+    .gameBoard{
+        max-width: 40rem;
+        height: 35rem;
+        
+        
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    p, label{
+        font-size: 1.8em;
+    }
+    #player1, #player2, .reset{
+        font-size: 1.6em;
+    }
+    .p1,.p2{
+        font-size: 7rem;
+    }
+    .p1{
+        top: 45%;
+        right: 65%;
+    }
+    .p2{
+        top: 52%;
+        right: -27%;
+    }
+    #gameWinner{
+        font-size: 2.5em;
+    }
+  
+}
