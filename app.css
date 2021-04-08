@@ -214,9 +214,6 @@ p, label{
         height: 35rem;
     }
     
-    h1{
-        font-size: 2.5em;
-    }
     p, label{
         font-size: 1.9em;
     }
@@ -239,13 +236,9 @@ p, label{
 @media(min-width: 1400px){
     .gameBoard{
         max-width: 40rem;
-        height: 35rem;
-        
-        
+        height: 35rem;   
     }
-    h1{
-        font-size: 2.5em;
-    }
+ 
     p, label{
         font-size: 1.8em;
     }
@@ -266,5 +259,13 @@ p, label{
     #gameWinner{
         font-size: 2.5em;
     }
-  
+    
+@media(min-width: 1500px){
+        .p2{
+            right: -20%;
+        }
+        .p1{
+            right: 73%;
+        }
+    }
 }
